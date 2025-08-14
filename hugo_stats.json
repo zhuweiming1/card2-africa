@@ -57,6 +57,7 @@
       "features",
       "hero",
       "hero-btn",
+      "legal-links",
       "logo",
       "rate-card",
       "rate-container",
@@ -67,7 +68,8 @@
       "testimonial-card",
       "testimonial-container",
       "testimonials",
-      "trade-btn"
+      "trade-btn",
+      "whatsapp-link"
     ],
     "ids": [
       "cardType",

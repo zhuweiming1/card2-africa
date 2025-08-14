@@ -25,7 +25,7 @@
         .hero { display: flex; justify-content: space-between; align-items: center; padding: 6rem 4rem; background: #f5f5f5; }
         .hero .container { max-width: 600px; }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.4rem; margin-bottom: 2rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
         .hero .hero-btn { padding: 0.75rem 1.5rem; background: #25D366; color: #fff; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
 
          
@@ -95,8 +95,11 @@
         footer h4:after { content: ""; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #25D366; }
         footer p { margin-bottom: 0.8rem; }
         .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
-        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #222; border-radius: 50%; color: #fff; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #222; border-radius: 50%; color: #fff; }
         .copyright { text-align: center; padding-top: 3rem; width: 100%; color: #aaa; font-size: 0.9rem; }
+        .legal-links {float: right;margin-top: 10px;display: flex;gap: 16px;justify-content: center;flex-wrap: wrap;}
+        .legal-links a {color: #888; text-decoration: none;font-size: 14px;transition: color 0.3s ease, text-decoration 0.3s ease;}
+        .legal-links a:hover {color: #25D366;text-decoration: underline;}
 
          
         @media(max-width: 1024px){
@@ -107,7 +110,7 @@
             .testimonial-container { flex-wrap: wrap; }
         }
         @media(max-width: 768px){
-            header { flex-direction: column; padding: 1rem 2rem; gap: 1rem; }
+            header {  padding: 1rem 2rem; gap: 1rem; }
             header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
             header nav a { margin: 0 0.5rem; }
             .rate-container { flex-direction: column; }
@@ -122,12 +125,12 @@
 <body>
 
 <header>
-    <div class="logo"><a href="#"><img src="https://codegc.com/wp-content/uploads/2023/11/CodeGC-1-1.png" alt="CodeGC Logo"></a></div>
+    <div class="logo"><a href="#"><img src="/images/other/logotest.png" alt="GiftCard Logo"></a></div>
     <nav>
-        <a href="#">Service</a>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="https://codegc.com/whatsapp/trade/" class="cta-button">Contact Now</a>
+
+
+
+        <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="cta-button whatsapp-link">Contact Now</a>
     </nav>
 </header>
 
@@ -135,7 +138,7 @@
     <div class="container">
         <h1>Sell Your Gift Cards, Pay In Naira 🇳🇬</h1>
         <p>Ultimate site to trade gift cards at the best rates 📈</p>
-        <a href="https://codegc.com/whatsapp/trade/" class="hero-btn">Get Started</a>
+        <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="hero-btn whatsapp-link">Get Started</a>
     </div>
 </section>
 
@@ -170,17 +173,17 @@
     <div class="section-heading"><h2>Top Gift Cards Rates Today</h2></div>
     <div class="rate-container">
         <div class="rate-card">
-            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2023/11/未标题-5.png" alt="Steam"><b>Steam</b></div>
+            <div class="card-info"><img src="/images/other/未标题-5.png" alt="Steam"><b>Steam</b></div>
             <div>GBP</div>
             <div class="card-value">NGN 1355</div>
         </div>
         <div class="rate-card">
-            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2024/06/apple-300x300-1.webp" alt="iTunes"><b>iTunes</b></div>
+            <div class="card-info"><img src="/images/other/apple-300x300-1.webp" alt="iTunes"><b>iTunes</b></div>
             <div>100-400 picture</div>
             <div class="card-value">NGN 1086</div>
         </div>
         <div class="rate-card">
-            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2024/06/11122.png" alt="eBay"><b>eBay</b></div>
+            <div class="card-info"><img src="/images/other/11122.png" alt="eBay"><b>eBay</b></div>
             <div>USA 100-199</div>
             <div class="card-value">NGN 953</div>
         </div>
@@ -241,16 +244,16 @@
 <section class="cta">
     <h2>Start Trading Gift Cards Today</h2>
     <p>Join thousands of satisfied customers who get the best rates for their gift cards</p>
-    <a href="https://codegc.com/whatsapp/trade/">Get Started Now</a>
+    <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="whatsapp-link">Get Started Now</a>
 </section>
 
 <footer>
     <div class="container">
         <div>
             <h4>Contact Us</h4>
-            <p>Email: support@codegc.com</p>
-            <p><a href="https://wa.me/2348123456789">WhatsApp: +234 812 345 6789</a></p>
-            <p>Business Hours: 8AM - 10PM (GMT+1)</p>
+            <p>Chengdu Derongliyuan Trading Co., Ltd.</p>
+            <p>Room 521, 5th Floor, Building 5, No. 2, Jingcui West Road, Chenghua District, Chengdu City, Sichuan Province</p>
+            <p>WhatsApp: +8617764108746</p>
         </div>
         <div>
             <h4>Quick Links</h4>
@@ -262,17 +265,56 @@
         <div>
             <h4>Follow Us</h4>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="whatsapp-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="whatsapp-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="whatsapp-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" data-numbers="8617764108746,8619007249064,8613872912713,8615872899925,8613451187556" class="whatsapp-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
-    <div class="copyright">© 2025 CodeGC. All Rights Reserved.</div>
+    <div class="copyright">© 2025 GiftCardWas. All Rights Reserved.
+        <div class="legal-links">
+            <a href="/privacy-policy.html">privacy policy</a>
+        </div>
+    </div>
+
 </footer>
 
 <script>
+    
+    document.querySelectorAll('.whatsapp-link').forEach(link => {
+        link.addEventListener('click', async function(e) {
+            e.preventDefault();
+
+            
+            const numbers = this.dataset.numbers.split(',').map(n => n.trim());
+
+            try {
+                
+                const res = await fetch('/.netlify/functions/click-counter', {
+                    method: 'POST'
+                });
+                if(!res.ok) throw new Error('请求失败')
+                const data = await res.json();
+                const count = data.count;
+
+                
+                const index = (count - 1) % numbers.length; 
+                const selectedNumber = numbers[index];
+
+                
+                const whatsappUrl = `https://wa.me/${selectedNumber}`;
+                window.open(whatsappUrl, '_blank');
+            } catch (error) {
+                console.error('跳转出错:', error);
+                
+                const randomIndex = Math.floor(Math.random() * numbers.length);
+                const fallbackNumber = numbers[randomIndex];
+                window.open(`https://wa.me/${fallbackNumber}`, '_blank');
+            }
+        });
+    });
+
     
     function calculate() {
         const type = document.getElementById('cardType');
