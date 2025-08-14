@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGC Gift Card Exchange</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+         
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        a { text-decoration: none; color: inherit; }
+
+         
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+
+         
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 4rem; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        header .logo img { height: 50px; }
+        header nav a { margin-left: 2rem; font-weight: bold; color: #007bff; }
+        header .cta-button { padding: 0.5rem 1rem; background: #25D366; color: #fff; border-radius: 6px; }
+
+         
+        .hero { display: flex; justify-content: space-between; align-items: center; padding: 6rem 4rem; background: #f5f5f5; }
+        .hero .container { max-width: 600px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.4rem; margin-bottom: 2rem; }
+        .hero .hero-btn { padding: 0.75rem 1.5rem; background: #25D366; color: #fff; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+
+         
+        .features { display: flex; justify-content: space-between; flex-wrap: nowrap; padding: 6rem 4rem; }
+        .feature-card { flex: 1; margin: 0 1rem; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .feature-card h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .feature-card ul { list-style: none; text-align: left; margin-top: 1rem; }
+        .feature-card ul li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; }
+        .feature-card ul li i { color: #25D366; position: absolute; left: 0; top: 4px; }
+
+         
+        .section-heading { text-align: center; margin-bottom: 3rem; }
+        .section-heading h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-heading h2:after { content: ""; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #25D366; border-radius: 2px; }
+
+         
+        .rates { padding: 4rem 4rem; background: #f9f9f9; }
+        .rate-container { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .rate-card { flex: 1 1 30%; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.5rem; background: #fff; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .rate-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .rate-card img { width: 50px; height: 50px; object-fit: contain; margin-right: 1rem; }
+        .rate-card .card-info { display: flex; align-items: center; }
+        .rate-card .card-value { font-weight: bold; font-size: 1.1rem; color: #25D366; }
+
+         
+        .calculator-container { padding: 6rem 4rem; display: flex; justify-content: center; }
+        .calculator { padding: 2.5rem; background: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 600px; width: 100%; }
+        .calculator h2 { margin-bottom: 1.5rem; text-align: center; }
+        .calculator p { text-align: center; margin-bottom: 1.5rem; color: #666; }
+        .calculator select, .calculator input { width: 100%; padding: 0.8rem; margin-bottom: 1.5rem; border-radius: 6px; border: 1px solid #ddd; font-size: 1rem; }
+        .calculator .result { display: flex; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; padding: 1rem; background: #f9f9f9; border-radius: 6px; font-size: 1.2rem; }
+        .calculator .trade-btn { display: block; text-align: center; padding: 1rem; background: #25D366; color: #fff; border-radius: 6px; margin-top: 1.5rem; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; transition: background 0.3s ease; }
+        .calculator .trade-btn:hover { background: #1db954; }
+
+         
+        .faq { padding: 4rem 4rem; background: #f9f9f9; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .accordion-item { border-bottom: 1px solid #ddd; margin-bottom: 0.5rem; border-radius: 6px; overflow: hidden; }
+        .accordion-item:first-child { border-top: 1px solid #ddd; }
+        .accordion-item button { background: #fff; border: none; width: 100%; text-align: left; padding: 1.5rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; }
+        .accordion-item button i { transition: transform 0.3s ease; }
+        .accordion-item .content { display: none; padding: 0 1.5rem 1.5rem 1.5rem; background: #fff; color: #555; line-height: 1.7; }
+        .accordion-item.active .content { display: block; }
+        .accordion-item.active button i { transform: rotate(180deg); }
+
+         
+        .testimonials { padding: 4rem 4rem; }
+        .testimonial-container { display: flex; justify-content: space-between; flex-wrap: nowrap; gap: 2rem; }
+        .testimonial-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex: 1; position: relative; }
+        .testimonial-card:before { content: "“"; position: absolute; top: 10px; left: 20px; font-size: 5rem; color: #f0f0f0; font-family: Georgia, serif; line-height: 1; }
+        .testimonial-card p { font-style: italic; margin-bottom: 1.5rem; position: relative; z-index: 2; }
+        .testimonial-card .author { margin-top: 1rem; font-weight: bold; color: #25D366; }
+
+         
+        .cta { padding: 6rem 4rem; text-align: center; background: linear-gradient(to right, #007bff, #6a5cff); color: #fff; }
+        .cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta a { display: inline-block; padding: 0.9rem 2rem; background: #fff; color: #007bff; border-radius: 6px; font-weight: bold; margin-top: 1rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .cta a:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+         
+        footer { padding: 6rem 4rem; background: #111; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        footer a { color: #25D366; transition: opacity 0.3s ease; }
+        footer a:hover { opacity: 0.8; }
+        footer div { flex: 1; min-width: 200px; }
+        footer h4 { font-size: 1.3rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
+        footer h4:after { content: ""; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #25D366; }
+        footer p { margin-bottom: 0.8rem; }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #222; border-radius: 50%; color: #fff; }
+        .copyright { text-align: center; padding-top: 3rem; width: 100%; color: #aaa; font-size: 0.9rem; }
+
+         
+        @media(max-width: 1024px){
+            .hero { flex-direction: column; text-align: center; padding: 4rem 2rem; }
+            .hero .container { max-width: 100%; }
+            .features { flex-wrap: wrap; padding: 4rem 2rem; }
+            .feature-card { margin: 1rem 0; }
+            .testimonial-container { flex-wrap: wrap; }
+        }
+        @media(max-width: 768px){
+            header { flex-direction: column; padding: 1rem 2rem; gap: 1rem; }
+            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            header nav a { margin: 0 0.5rem; }
+            .rate-container { flex-direction: column; }
+        }
+        @media(max-width: 480px){
+            .hero h1 { font-size: 1.8rem; }
+            .section-heading h2 { font-size: 1.6rem; }
+            .calculator { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="#"><img src="https://codegc.com/wp-content/uploads/2023/11/CodeGC-1-1.png" alt="CodeGC Logo"></a></div>
+    <nav>
+        <a href="#">Service</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="https://codegc.com/whatsapp/trade/" class="cta-button">Contact Now</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Sell Your Gift Cards, Pay In Naira 🇳🇬</h1>
+        <p>Ultimate site to trade gift cards at the best rates 📈</p>
+        <a href="https://codegc.com/whatsapp/trade/" class="hero-btn">Get Started</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h4>Multiple distribution quotation system.</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Competitive Rates</li>
+            <li><i class="fa fa-check"></i> Various types are acceptable</li>
+            <li><i class="fa fa-check"></i> Stable and trustworthy</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>Generous mission rewards</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Monthly Transaction Rewards</li>
+            <li><i class="fa fa-check"></i> Referral Program</li>
+            <li><i class="fa fa-check"></i> High reward mechanism</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>Stable and efficient payment</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Multiple payment channels</li>
+            <li><i class="fa fa-check"></i> Various fund accounts</li>
+            <li><i class="fa fa-check"></i> Safe and fast payments</li>
+        </ul>
+    </div>
+</section>
+
+<section class="rates">
+    <div class="section-heading"><h2>Top Gift Cards Rates Today</h2></div>
+    <div class="rate-container">
+        <div class="rate-card">
+            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2023/11/未标题-5.png" alt="Steam"><b>Steam</b></div>
+            <div>GBP</div>
+            <div class="card-value">NGN 1355</div>
+        </div>
+        <div class="rate-card">
+            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2024/06/apple-300x300-1.webp" alt="iTunes"><b>iTunes</b></div>
+            <div>100-400 picture</div>
+            <div class="card-value">NGN 1086</div>
+        </div>
+        <div class="rate-card">
+            <div class="card-info"><img src="https://codegc.com/wp-content/uploads/2024/06/11122.png" alt="eBay"><b>eBay</b></div>
+            <div>USA 100-199</div>
+            <div class="card-value">NGN 953</div>
+        </div>
+    </div>
+</section>
+
+<div class="calculator-container">
+    <div class="calculator">
+        <h2>Gift Card Rate Calculator</h2>
+        <p>Easily select the type of card and enter the face value to get the exchange rate</p>
+        <select id="cardType">
+            <option value="steam" data-rate="1355">Steam</option>
+            <option value="itunes" data-rate="1086">iTunes</option>
+            <option value="ebay" data-rate="953">eBay</option>
+        </select>
+        <input type="number" id="cardValue" placeholder="Enter Gift Card Value">
+        <div class="result"><span>NGN Amount:</span><span id="resultAmount">0</span></div>
+        <button class="trade-btn" onclick="calculate()">Trade Now</button>
+    </div>
+</div>
+
+<section class="faq">
+    <div class="section-heading"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq-container">
+        <div class="accordion-item">
+            <button>How do I sell my gift cards? <i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>Select the card type, enter its value, and proceed with the trade via WhatsApp link. Our team will guide you through the simple process.</p></div>
+        </div>
+        <div class="accordion-item">
+            <button>How long does it take to get paid? <i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>Payments are usually processed within 5-15 minutes after verification. We support instant transfers to Nigerian bank accounts and mobile wallets.</p></div>
+        </div>
+        <div class="accordion-item">
+            <button>What gift cards do you accept? <i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>We accept a wide range of gift cards including Steam, iTunes, eBay, Amazon, Google Play, Walmart, and many others. Check our rates page for the full list.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="section-heading"><h2>Customer Reviews</h2></div>
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p>"I've been trading with CodeGC for over a year now. Their rates are consistently the best, and payments are always instant. Highly recommended!"</p>
+            <div class="author">— John Doe</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"Excellent service! The process was smooth and straightforward. I received my payment in less than 10 minutes. Will definitely use again."</p>
+            <div class="author">— Jane Smith</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"As a frequent trader, I appreciate their transparent rates and reliable service. The referral program is also a great bonus for regular users."</p>
+            <div class="author">— David Johnson</div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Trading Gift Cards Today</h2>
+    <p>Join thousands of satisfied customers who get the best rates for their gift cards</p>
+    <a href="https://codegc.com/whatsapp/trade/">Get Started Now</a>
+</section>
+
+<footer>
+    <div class="container">
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: support@codegc.com</p>
+            <p><a href="https://wa.me/2348123456789">WhatsApp: +234 812 345 6789</a></p>
+            <p>Business Hours: 8AM - 10PM (GMT+1)</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Rates</a></p>
+            <p><a href="#">Blog</a></p>
+            <p><a href="#">Contact</a></p>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">© 2025 CodeGC. All Rights Reserved.</div>
+</footer>
+
+<script>
+    
+    function calculate() {
+        const type = document.getElementById('cardType');
+        const rate = parseFloat(type.options[type.selectedIndex].dataset.rate);
+        const value = parseFloat(document.getElementById('cardValue').value);
+        const result = !isNaN(value) ? value * rate : 0;
+        document.getElementById('resultAmount').textContent = result.toLocaleString();
+    }
+
+    
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(item => {
+        item.querySelector('button').addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>

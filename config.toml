@@ -1,0 +1,58 @@
+baseURL = "https://giftcardwas.com/"
+relativeURLs = false   # 必须为false
+canonifyURLs = true    # 推荐为true
+languageCode = "en-us"
+title = "GiftCardWas"
+theme = "introduction"
+defaultContentLanguage = "en"  # 添加默认语言
+
+[module]
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "themes/introduction/static"
+target = "static"  # 将主题静态文件合并到主站点
+
+[params]
+whatsapp = "8617764108746,8619007249064,8613872912713,8615872899925,8613451187556"  # 替换为实际WhatsApp号码
+email = "jianglinwang727@gmail.com"
+phone = "+8617764108746"
+address = "Lagos, Nigeria"
+
+[markup.goldmark.renderer]
+unsafe = true  # 允许原始HTML渲染
+
+# 多语言配置
+[languages]
+[languages.en]
+weight = 1
+languageName = "English"
+contentDir = "content/en"
+title = "GiftCardWas"
+
+[languages.en.params]
+slogan = "Instant Gift Card Exchange"
+facebook = "https://facebook.com/GiftCardWas"
+twitter = "https://twitter.com/GiftCardWas"
+instagram = "https://instagram.com/GiftCardWas"
+
+[languages.fr]
+weight = 2
+languageName = "Français"
+contentDir = "content/fr"
+title = "CardAfrique"
+
+[languages.fr.params]
+slogan = "Échange Instantané de Cartes-Cadeaux"
+facebook = "https://facebook.com/cardafrica"
+twitter = "https://twitter.com/cardafrica"
+instagram = "https://instagram.com/cardafrica"
+
+# 添加资产管道配置
+[build]
+writeStats = true  # 生成资源映射
+
+[assets]
+[assets.postcss]
+noMap = false   # 启用 source map
