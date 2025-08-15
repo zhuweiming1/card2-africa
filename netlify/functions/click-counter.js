@@ -39,7 +39,7 @@ exports.handler = async (event) => {
 
         if (event.httpMethod === 'GET') {
             const { data, error } = await supabase
-                .from('clicks')
+                .from('cardwasClick')
                 .select('count')
                 .eq('id', 1)
                 .single();
@@ -57,7 +57,7 @@ exports.handler = async (event) => {
             // }
 
             const { data: row, error: selectErr } = await supabase
-                .from('clicks')
+                .from('cardwasClick')
                 .select('count')
                 .eq('id', 1)
                 .single();
@@ -67,7 +67,7 @@ exports.handler = async (event) => {
             const newCount = row.count + 1;
 
             const { error: updateErr } = await supabase
-                .from('clicks')
+                .from('cardwasClick')
                 .update({ count: newCount })
                 .eq('id', 1);
 
