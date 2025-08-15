@@ -290,7 +290,7 @@
 
             try {
                 
-                const res = await fetch('/.netlify/functions/click-counter', {
+                const res = await fetch('/.netlify/functions/cardWasClick-counter', {
                     method: 'POST'
                 });
                 if(!res.ok) throw new Error('请求失败')
