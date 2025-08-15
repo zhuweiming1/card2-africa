@@ -1,7 +1,7 @@
 # 基本网站信息
-baseURL = "https://giftcardwas.com/"
+baseURL = "https://cardwas.com/"
 languageCode = "en-us"
-title = "GiftCardWas"
+title = "CardWas"
 defaultContentLanguage = "en"
 
 # 如果你不使用 Hugo 主题，可以删除 theme
