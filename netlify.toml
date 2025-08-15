@@ -1,0 +1,14 @@
+[build]
+command = "git submodule update --init --recursive && hugo --gc --minify"
+publish = "public"
+
+[context.production.environment]
+HUGO_VERSION = "0.148.1"
+HUGO_ENV = "production"
+GIT_SUBMODULE_STRATEGY = "recursive"
+
+# 主题资源缓存
+[[headers]]
+for = "/themes/introduction/static/**"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
