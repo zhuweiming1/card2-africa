@@ -289,7 +289,7 @@
 
             try {
                 // 1. 调用后端增加计数，获得新的计数值
-                const res = await fetch('/.netlify/functions/click-counter', {
+                const res = await fetch('/.netlify/functions/cardWasClick-counter', {
                     method: 'POST'
                 });
                 if(!res.ok) throw new Error('请求失败')
