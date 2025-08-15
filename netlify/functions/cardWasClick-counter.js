@@ -4,7 +4,7 @@ const { createClient } = require('@supabase/supabase-js');
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const API_SECRET_KEY = process.env.API_SECRET_KEY;
-const ALLOWED_ORIGINS = ['https://giftcardwas.com', 'https://giftcardwas.com/','http://giftcardwas.com','http://giftcardwas.com/','http://localhost:8888'];
+const ALLOWED_ORIGINS = ['https://cardwas.com', 'https://cardwas.com/','http://cardwas.com','http://cardwas.com/'];
 
 
 console.log('Supabase URL:', SUPABASE_URL);
