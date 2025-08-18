@@ -14,6 +14,7 @@
       "header",
       "html",
       "i",
+      "iframe",
       "img",
       "input",
       "li",
@@ -46,7 +47,6 @@
       "fa",
       "fa-check",
       "fa-chevron-down",
-      "fa-facebook",
       "fa-facebook-f",
       "fa-instagram",
       "fa-linkedin-in",
@@ -77,12 +77,8 @@
       "whatsapp-random"
     ],
     "ids": [
-      "calculate-btn",
-      "card-amount",
-      "card-type",
       "cardType",
       "cardValue",
-      "payout",
       "resultAmount"
     ]
   }
