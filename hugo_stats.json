@@ -49,6 +49,7 @@
       "fa-instagram",
       "fa-linkedin-in",
       "fa-twitter",
+      "fa-whatsapp",
       "fab",
       "faq",
       "faq-container",
@@ -69,7 +70,9 @@
       "testimonial-container",
       "testimonials",
       "trade-btn",
-      "whatsapp-link"
+      "whatsapp-float",
+      "whatsapp-link",
+      "whatsapp-random"
     ],
     "ids": [
       "cardType",
