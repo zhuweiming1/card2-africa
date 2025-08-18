@@ -20,6 +20,7 @@
       "link",
       "meta",
       "nav",
+      "noscript",
       "option",
       "p",
       "script",
@@ -45,6 +46,7 @@
       "fa",
       "fa-check",
       "fa-chevron-down",
+      "fa-facebook",
       "fa-facebook-f",
       "fa-instagram",
       "fa-linkedin-in",
@@ -75,8 +77,12 @@
       "whatsapp-random"
     ],
     "ids": [
+      "calculate-btn",
+      "card-amount",
+      "card-type",
       "cardType",
       "cardValue",
+      "payout",
       "resultAmount"
     ]
   }
