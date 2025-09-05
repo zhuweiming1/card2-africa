@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWas Gift Card Exchange</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        a { text-decoration: none; color: inherit; }
+
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 4rem; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        header .logo img { height: 50px; }
+        header nav a { margin-left: 2rem; font-weight: bold; color: #007bff; }
+        header .cta-button { padding: 0.5rem 1rem; background: #25D366; color: #fff; border-radius: 6px; }
+
+
+        .hero { display: flex; justify-content: space-between; align-items: center; padding: 6rem 4rem; background: #f5f5f5; }
+        .hero .container { max-width: 600px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+        .hero .hero-btn { padding: 0.75rem 1.5rem; background: #25D366; color: #fff; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
+
+
+        .features { display: flex; justify-content: space-between; flex-wrap: nowrap; padding: 6rem 4rem; }
+        .feature-card { flex: 1; margin: 0 1rem; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .feature-card h4 { margin-bottom: 1rem; font-size: 1.2rem; }
+        .feature-card ul { list-style: none; text-align: left; margin-top: 1rem; }
+        .feature-card ul li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; }
+        .feature-card ul li i { color: #25D366; position: absolute; left: 0; top: 4px; }
+
+
+        .section-heading { text-align: center; margin-bottom: 3rem; }
+        .section-heading h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-heading h2:after { content: ""; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: #25D366; border-radius: 2px; }
+
+
+        .rates { padding: 4rem 4rem; background: #f9f9f9; }
+        .rate-container { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .rate-card { flex: 1 1 30%; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.5rem; background: #fff; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .rate-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .rate-card img { width: 50px; height: 50px; object-fit: contain; margin-right: 1rem; }
+        .rate-card .card-info { display: flex; align-items: center; }
+        .rate-card .card-value { font-weight: bold; font-size: 1.1rem; color: #25D366; }
+
+
+        .calculator-container { padding: 6rem 4rem; display: flex; justify-content: center; }
+        .calculator { padding: 2.5rem; background: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 600px; width: 100%; }
+        .calculator h2 { margin-bottom: 1.5rem; text-align: center; }
+        .calculator p { text-align: center; margin-bottom: 1.5rem; color: #666; }
+        .calculator select, .calculator input { width: 100%; padding: 0.8rem; margin-bottom: 1.5rem; border-radius: 6px; border: 1px solid #ddd; font-size: 1rem; }
+        .calculator .result { display: flex; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; padding: 1rem; background: #f9f9f9; border-radius: 6px; font-size: 1.2rem; }
+        .calculator .trade-btn { display: block; text-align: center; padding: 1rem; background: #25D366; color: #fff; border-radius: 6px; margin-top: 1.5rem; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; transition: background 0.3s ease; }
+        .calculator .trade-btn:hover { background: #1db954; }
+
+
+        .faq { padding: 4rem 4rem; background: #f9f9f9; }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .accordion-item { border-bottom: 1px solid #ddd; margin-bottom: 0.5rem; border-radius: 6px; overflow: hidden; }
+        .accordion-item:first-child { border-top: 1px solid #ddd; }
+        .accordion-item button { background: #fff; border: none; width: 100%; text-align: left; padding: 1.5rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; }
+        .accordion-item button i { transition: transform 0.3s ease; }
+        .accordion-item .content { display: none; padding: 0 1.5rem 1.5rem 1.5rem; background: #fff; color: #555; line-height: 1.7; }
+        .accordion-item.active .content { display: block; }
+        .accordion-item.active button i { transform: rotate(180deg); }
+
+
+        .testimonials { padding: 4rem 4rem; }
+        .testimonial-container { display: flex; justify-content: space-between; flex-wrap: nowrap; gap: 2rem; }
+        .testimonial-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex: 1; position: relative; }
+        .testimonial-card:before { content: "“"; position: absolute; top: 10px; left: 20px; font-size: 5rem; color: #f0f0f0; font-family: Georgia, serif; line-height: 1; }
+        .testimonial-card p { font-style: italic; margin-bottom: 1.5rem; position: relative; z-index: 2; }
+        .testimonial-card .author { margin-top: 1rem; font-weight: bold; color: #25D366; }
+
+
+        .cta { padding: 6rem 4rem; text-align: center; background: linear-gradient(to right, #007bff, #6a5cff); color: #fff; }
+        .cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta a { display: inline-block; padding: 0.9rem 2rem; background: #fff; color: #007bff; border-radius: 6px; font-weight: bold; margin-top: 1rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .cta a:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+
+        footer { padding: 6rem 4rem; background: #111; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        footer a { color: #25D366; transition: opacity 0.3s ease; }
+        footer a:hover { opacity: 0.8; }
+        footer div { flex: 1; min-width: 200px; }
+        footer h4 { font-size: 1.3rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
+        footer h4:after { content: ""; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #25D366; }
+        footer p { margin-bottom: 0.8rem; }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #222; border-radius: 50%; color: #fff; }
+        .copyright { text-align: center; padding-top: 3rem; width: 100%; color: #aaa; font-size: 0.9rem; }
+        .legal-links {float: right;margin-top: 10px;display: flex;gap: 16px;justify-content: center;flex-wrap: wrap;}
+        .legal-links a {color: #888; text-decoration: none;font-size: 14px;transition: color 0.3s ease, text-decoration 0.3s ease;}
+        .legal-links a:hover {color: #25D366;text-decoration: underline;}
+        .whatsapp-float {position: fixed;bottom: 30px;right: 30px;z-index: 1000;animation: float 3s ease-in-out infinite;}
+        .whatsapp-float a {display: flex;align-items: center;justify-content: center;width: 70px;height: 70px;background-color: #25D366;border-radius: 50%;color: white;font-size: 2rem;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);transition: all 0.3s ease;text-decoration: none;}
+        .whatsapp-float a:hover {background-color: #128C7E;transform: scale(1.1);box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);}
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        @media(max-width: 1024px){
+            .hero { flex-direction: column; text-align: center; padding: 4rem 2rem; }
+            .hero .container { max-width: 100%; }
+            .features { flex-wrap: wrap; padding: 4rem 2rem; }
+            .feature-card { margin: 1rem 0; }
+            .testimonial-container { flex-wrap: wrap; }
+        }
+        @media(max-width: 768px){
+            header {  padding: 1rem 2rem; gap: 1rem; }
+            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            header nav a { margin: 0 0.5rem; }
+            .rate-container { flex-direction: column; }
+            .whatsapp-float {bottom: 20px;right: 20px;}
+            .whatsapp-float a { width: 60px; height: 60px; font-size: 1.8rem; }
+        }
+        @media(max-width: 480px){
+            .hero h1 { font-size: 1.8rem; }
+            .section-heading h2 { font-size: 1.6rem; }
+            .calculator { padding: 1.5rem; }
+            .whatsapp-float a { width: 50px; height: 50px; font-size: 1.5rem; }
+        }
+    </style>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M5NJF3HQ');</script>
+
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5NJF3HQ"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1261178858583518');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>&lt; img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1261178858583518&ev=PageView&noscript=1"
+        /></noscript>
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="#"><img src="/images/other/logoT.webp" alt="GiftCard Logo"></a></div>
+    <nav>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Sell Your Gift Cards, Pay In Naira 🇳🇬</h1>
+        <p>Ultimate site to trade gift cards at the best rates 📈</p>
+        <a href="#" data-numbers="8619007244694,8615827853613" class="hero-btn whatsapp-link">Get Started</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h4>Multiple distribution quotation system.</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Competitive Rates</li>
+            <li><i class="fa fa-check"></i> Various types are acceptable</li>
+            <li><i class="fa fa-check"></i> Stable and trustworthy</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>Generous mission rewards</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Monthly Transaction Rewards</li>
+            <li><i class="fa fa-check"></i> Referral Program</li>
+            <li><i class="fa fa-check"></i> High reward mechanism</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>Stable and efficient payment</h4>
+        <ul>
+            <li><i class="fa fa-check"></i> Multiple payment channels</li>
+            <li><i class="fa fa-check"></i> Various fund accounts</li>
+            <li><i class="fa fa-check"></i> Safe and fast payments</li>
+        </ul>
+    </div>
+</section>
+
+<section class="rates">
+    <div class="section-heading"><h2>Top Gift Cards Rates Today</h2></div>
+    <div class="rate-container">
+        <div class="rate-card">
+            <div class="card-info"><img src="/images/other/未标题-5.webp" alt="Steam"><b>Steam</b></div>
+            <div>GBP</div>
+            <div class="card-value">NGN 1355</div>
+        </div>
+        <div class="rate-card">
+            <div class="card-info"><img src="/images/other/apple-300x300-1.webp" alt="iTunes"><b>iTunes</b></div>
+            <div>100-400 picture</div>
+            <div class="card-value">NGN 1086</div>
+        </div>
+        <div class="rate-card">
+            <div class="card-info"><img src="/images/other/11122.webp" alt="eBay"><b>eBay</b></div>
+            <div>USA 100-199</div>
+            <div class="card-value">NGN 953</div>
+        </div>
+    </div>
+</section>
+
+<div class="calculator-container">
+    <div class="calculator">
+        <h2>Gift Card Rate Calculator</h2>
+        <p>Easily select the type of card and enter the face value to get the exchange rate</p>
+        <select id="cardType">
+            <option value="steam" data-rate="1355">Steam</option>
+            <option value="itunes" data-rate="1086">iTunes</option>
+            <option value="ebay" data-rate="953">eBay</option>
+        </select>
+        <input type="number" id="cardValue" placeholder="Enter Gift Card Value">
+        <div class="result"><span>NGN Amount:</span><span id="resultAmount">0</span></div>
+        <button class="trade-btn" onclick="calculate()">Trade Now</button>
+    </div>
+</div>
+
+<section class="faq">
+    <div class="section-heading"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq-container">
+        <div class="accordion-item">
+            <button>What types of card does CardWas buy<i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>We buy Steam, iTunes, Google Play, eBay, Razer Gold, Xbox, Amazon, Walmart, Vanilla, American Express, Sephora, Nordstrom, etc with high rates.</p></div>
+        </div>
+        <div class="accordion-item">
+            <button>How to sell gift cards to CardWas?<i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>Please click Get Started, Sell Now or Contact Now button to enter Whatsapp. hat with us via WhatsApp and our customer service will give you real-time rates. We will pay you Naira after verification of your card via opay or other banks.</p></div>
+        </div>
+        <div class="accordion-item">
+            <button>How is the rate?<i class="fas fa-chevron-down"></i></button>
+            <div class="content"><p>We will give the most competitive exchange rates according to the market. Please contact us on WhatsApp for the latest exchange rates and prices.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="section-heading"><h2>Customer Reviews</h2></div>
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p>"CardWas is a trustworthy platform for selling various types of gift cards. They offer the best rates in the market, and I highly recommend them to anyone looking to sell gift cards online."</p>
+            <div class="author">— John Doe</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"5 stars service! They are truly fast and offer amazing service. They are trustworthy and value their customers. It’s a pleasure to meet you guys!"</p>
+            <div class="author">— Jane Smith</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"The company is doing so well! Trades are fast, with no delays, and the rates are massive and sweet. Keep up the good work! I recommend this platform to anyone who wants to redeem gift cards from any part of the world."</p>
+            <div class="author">— David Johnson</div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Trading Gift Cards Today</h2>
+    <p>Join thousands of satisfied customers who get the best rates for their gift cards</p>
+</section>
+
+<footer>
+    <div class="container">
+        <div>
+            <h4>Contact Us</h4>
+            <p>Guangzhou Hexiang Trading Co., Ltd.</p>
+            <p>Room 202, No. 16, Zongbu Street, Dapuwei Village, Zengjiang Street, Zengcheng District, Guangzhou</p>
+            <p>WhatsApp: +8617764108746</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Rates</a></p>
+            <p><a href="#">Contact</a></p>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#" ><i class="fab fa-facebook-f"></i></a>
+                <a href="#" ><i class="fab fa-twitter"></i></a>
+                <a href="#" ><i class="fab fa-instagram"></i></a>
+                <a href="#" ><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">© 2025 CardWas. All Rights Reserved.
+        <div class="legal-links">
+            <a href="/privacy-policy.html">privacy policy</a>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp-float">
+    <a href="#"
+       class="whatsapp-random whatsapp-link"
+       data-numbers="8619007244694,8615827853613"
+       aria-label="WhatsApp Chat">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+<script>
+
+    document.querySelectorAll('.whatsapp-link').forEach(link => {
+        link.addEventListener('click', async function(e) {
+            e.preventDefault();
+
+
+            const numbers = this.dataset.numbers.split(',').map(n => n.trim());
+
+            try {
+
+                const res = await fetch('/.netlify/functions/cardWasClick-counter', {
+                    method: 'POST'
+                });
+                if(!res.ok) throw new Error('请求失败')
+                const data = await res.json();
+                const count = data.count;
+
+
+                const index = (count - 1) % numbers.length;
+                const selectedNumber = numbers[index];
+
+
+                const whatsappUrl = `https://wa.me/${selectedNumber}`;
+                window.open(whatsappUrl, '_blank');
+            } catch (error) {
+                console.error('跳转出错:', error);
+
+                const randomIndex = Math.floor(Math.random() * numbers.length);
+                const fallbackNumber = numbers[randomIndex];
+                window.open(`https://wa.me/${fallbackNumber}`, '_blank');
+            }
+        });
+    });
+
+
+    function calculate() {
+        const type = document.getElementById('cardType');
+        const rate = parseFloat(type.options[type.selectedIndex].dataset.rate);
+        const value = parseFloat(document.getElementById('cardValue').value);
+        const result = !isNaN(value) ? value * rate : 0;
+        document.getElementById('resultAmount').textContent = result.toLocaleString();
+    }
+
+    
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(item => {
+        item.querySelector('button').addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
